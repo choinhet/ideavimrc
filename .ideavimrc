@@ -17,7 +17,7 @@ map Y y$
 vnoremap p pgvy
 nmap <leader>t :q<CR>
 nmap <leader>a ggVG
-nnoremap <leader>p "9dawp
+nnoremp <leader>p "9dawp
 nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
 nnoremap n nzz
@@ -26,9 +26,14 @@ nnoremap <leader>sa "5yiw:%s/<c-r>5/
 nnoremap <leader>s "5yiw:s/<c-r>5/
 vnoremap <leader>sa "5y:%s/<c-r>5/
 vnoremap <leader>s "5y:s/<c-r>5/
-nnoremap <leader>i gdf=wy$<c-o>"9diwhpzz
- 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+nnoremap <leader>x gdf=wy$<c-o>"9diwhp<c-i>dd<c-o>zz
+nnoremap * *``
+
+vimrc -> ideavimrc
+nvim -> .lua
+
+" nnoremap <leader>y :.-6,.yank<left>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Plugins                                         """ 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""" 
 Plug 'tpope/vim-surround'
@@ -56,8 +61,6 @@ nmap <leader>n :action GotoNextError<CR>
 map gh <Action>(ShowErrorDescription)
 nmap <leader>ri :action Inline<CR>
 nmap <leader>rr :action RenameElement<CR>
-nmap <leader>rev :action IntroduceVariable<CR>
-vmap <leader>rev :action IntroduceVariable<CR>
 nmap <leader>rem :action ExtractMethod<CR>
 vmap <leader>rem :action ExtractMethod<CR>
 nmap <leader>rm :action Move<CR>
@@ -69,7 +72,9 @@ nmap >, :action MoveElementRight<CR>
 nmap <leader>gr :action Vcs.RollbackChangedLines<CR>
 nmap <leader>gd :action Vcs.ShowDiff<CR>
 nnoremap <leader>uj :action osmedile.intellij.stringmanip.UnescapeJavaAction<CR>
- 
+ nmap <leader>rev :action IntroduceVariable<CR>
+ vmap <leader>rev :action IntroduceVariable<CR>
+  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""" 
 """ String Manipulation                             """ 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""" 
