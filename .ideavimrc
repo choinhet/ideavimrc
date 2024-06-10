@@ -17,15 +17,15 @@ map Y y$
 vnoremap p pgvy
 nmap <leader>t :q<CR>
 nmap <leader>a ggVG
-nnoremp <leader>p "9dawp
+nnoremap <leader>p "9dawp
 nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
 nnoremap n nzz
 nnoremap N Nzz
-nnoremap <leader>sa "5yiw:%s/<c-r>5/
-nnoremap <leader>s "5yiw:s/<c-r>5/
-vnoremap <leader>sa "5y:%s/<c-r>5/
-vnoremap <leader>s "5y:s/<c-r>5/
+nnoremap <leader>sa "5yiw:%s/\<<c-r>5\>/
+nnoremap <leader>s "5yiw:s/\<<c-r>5\>/
+vnoremap <leader>sa "5y:%s/\<<c-r>5\>/
+vnoremap <leader>s "5y:s/\<<c-r>5\>/
 nnoremap <leader>x gdf=wy$<c-o>"9diwhp<c-i>dd<c-o>zz
 nnoremap * *``
 
