@@ -28,6 +28,8 @@ vnoremap <leader>sa "5y:%s/<c-r>5>/
 vnoremap <leader>s "5y:s/<c-r>5/
 nnoremap <leader>x gdf=wy$<c-o>"9diwhp<c-i>dd<c-o>zz
 nnoremap * *``
+noremap ç <ESC>
+
 
 vimrc -> ideavimrc
 nvim -> .lua
