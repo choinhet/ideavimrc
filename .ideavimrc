@@ -9,43 +9,52 @@ set clipboard=unnamedplus,unnamed,ideaput
 set nocompatible 
 set backspace=2
 set showcmd
- 
+
 vnoremap < <gv
 vnoremap > >gv
 vnoremap = =gv
 map Y y$
 vnoremap p pgvy
-nmap <leader>t :q<CR>
-nmap <leader>a ggVG
-nnoremap <leader>p "9dawp
-nnoremap <C-u> <C-u>zz
-nnoremap <C-d> <C-d>zz
+
 nnoremap n nzz
 nnoremap N Nzz
+nnoremap * *``
+
+function! PasteChar()
+    let @a = "ç"
+    execute "normal! i" . @a
+endfunction
+
+inoremap <M-c> <C-o>:call PasteChar()<CR>
+noremap ç <ESC>
+inoremap ç <ESC>
+
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
 nnoremap <leader>sa "5yiw:%s/<c-r>5/
 nnoremap <leader>s "5yiw:s/<c-r>5/
 vnoremap <leader>sa "5y:%s/<c-r>5>/
 vnoremap <leader>s "5y:s/<c-r>5/
 nnoremap <leader>x gdf=wy$<c-o>"9diwhp<c-i>dd<c-o>zz
-nnoremap * *``
-noremap ç <ESC>
-
+nmap <leader>t :q<CR>
+nmap <leader>a ggVG
+nnoremap <leader>p "9dawp
 
 vimrc -> ideavimrc
 nvim -> .lua
 
 " nnoremap <leader>y :.-6,.yank<left>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Plugins                                         """ 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+""" Plugins                                         """
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
- 
+
 map <c-n> :NERDTree<CR>
- 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-""" IDEA Actions                                    """ 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" IDEA Actions                                    """
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>= :action EditorResetFontSize<CR>
 nmap <leader>h <action>(PreviousTab)
 nmap <leader>l <action>(NextTab)
