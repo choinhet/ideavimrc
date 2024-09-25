@@ -20,15 +20,6 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *``
 
-function! PasteChar()
-    let @a = "ç"
-    execute "normal! i" . @a
-endfunction
-
-inoremap <M-c> <C-o>:call PasteChar()<CR>
-noremap ç <ESC>
-inoremap ç <ESC>
-
 nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
 nnoremap <leader>sa "5yiw:%s/<c-r>5/
@@ -49,6 +40,10 @@ nvim -> .lua
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+
+" Requires plugins IdeaVim EasyMotion and AceJump
+set easymotion
+map f <leader><leader>s
 
 map <c-n> :NERDTree<CR>
 
