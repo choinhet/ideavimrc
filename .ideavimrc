@@ -13,10 +13,10 @@ set showcmd
 vnoremap < <gv
 vnoremap > >gv
 
-map Y y$ " Yank whole line
-vnoremap p pgvy " Paste without yanking removed content
+map Y y$
+vnoremap p pgvy
 
-nnoremap * *`` " Load word into search registry and stay in the same place
+nnoremap * *``
 
 nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
