@@ -21,7 +21,7 @@ nnoremap * *``
 nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
 
-nmap <C-w>q :q<CR> " Close tab
+nmap <C-w>q :q<CR>
 nmap <leader>a ggVG
 
 vimrc -> ideavimrc
@@ -47,7 +47,7 @@ nmap <leader>= :action EditorResetFontSize<CR>
 
 nmap <leader>h <action>(PreviousTab)
 nmap <leader>l <action>(NextTab)
-nmap <leader>t :q<CR> " Close tab
+nmap <leader>t :q<CR>
 
 nmap <leader>i <action>(Generate)
 
