@@ -24,27 +24,17 @@ nnoremap <C-d> <C-d>zz
 nmap <C-w>q :q<CR>
 nmap <leader>a ggVG
 
-vimrc -> ideavimrc
-nvim -> .lua
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Plugins                                         """
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'tpope/vim-surround'
-Plug 'preservim/nerdtree'
-
-" Requires plugins IdeaVim EasyMotion and AceJump
-set easymotion
-set quickscope
 set multiple-cursors
-
-map <c-n> :NERDTree<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ IDEA Actions                                    """
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>= :action EditorResetFontSize<CR>
 
+vnoremap " :action EditorAddCaretPerSelectedLine<CR>:action EditorLineStart<CR>
 nmap <leader>h <action>(PreviousTab)
 nmap <leader>l <action>(NextTab)
 nmap <leader>t :q<CR>
@@ -59,48 +49,15 @@ nmap gi :action GotoImplementation<CR>
 nmap gs :action GotoSuperMethod<CR>
 map gh <Action>(ShowErrorDescription)
 
-nmap <leader>ri :action Inline<CR>
-nmap <leader>rr :action RenameElement<CR>
-
 nmap <leader>f  :action ReformatCode<CR>
 
-nmap <leader>rev :action IntroduceVariable<CR>
-vmap <leader>rev :action IntroduceVariable<CR>
-nmap <leader>rem :action ExtractMethod<CR>
-vmap <leader>rem :action ExtractMethod<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" String Manipulation                             """
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>cc :action StringManipulation.ToCamelCase<CR><ESC>
-nnoremap <leader>sc :action StringManipulation.ToSnakeCase<CR>
-nnoremap <leader>ssc :action StringManipulation.ToScreamingSnakeCase<CR>
-nnoremap <leader>kc :action StringManipulation.ToKebabCase<CR>
-vnoremap <leader>cc :action StringManipulation.ToCamelCase<CR><ESC>
-vnoremap <leader>sc :action StringManipulation.ToSnakeCase<CR>
-vnoremap <leader>ssc :action StringManipulation.ToScreamingSnakeCase<CR>
-vnoremap <leader>kc :action StringManipulation.ToKebabCase<CR>
-
-xnoremap :'<,'>norm! w<leader>cc :action StringManipulation.ToCamelCase<CR><ESC>
-xnoremap :'<,'>norm! w<leader>sc :action StringManipulation.ToSnakeCase<CR>
-xnoremap :'<,'>norm! w<leader>ssc :action StringManipulation.ToScreamingSnakeCase<CR>
-xnoremap :'<,'>norm! w<leader>kc :action StringManipulation.ToKebabCase<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Terminal specifics                              """
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-t>  :action ActivateTerminalToolWindow<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Multiple Cursors                                """
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <C-n> <Plug>NextWholeOccurrence
 xmap <C-n> <Plug>NextWholeOccurrence
 nmap g<C-n> <Plug>NextOccurrence
 xmap g<C-n> <Plug>NextOccurrence
 xmap <C-x> <Plug>SkipOccurrence
 xmap <C-p> <Plug>RemoveOccurrence
+
 nmap <leader><C-n> <Plug>AllWholeOccurrences
 xmap <leader><C-n> <Plug>AllWholeOccurrences
 nmap <leader>g<C-n> <Plug>AllOccurrences
