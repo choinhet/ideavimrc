@@ -1,18 +1,24 @@
 <code_scheme name="Default" version="173">
-  <SqlCodeStyleSettings version="7">
-    <option name="KEYWORD_CASE" value="1" />
-    <option name="QUERY_EL_LINE" value="101" />
-    <option name="QUERY_EL_COMMA" value="1" />
-    <option name="QUERY_TRUE_INDENT" value="false" />
-    <option name="QUERY_ALIGN_ELEMENTS" value="false" />
-    <option name="SUBQUERY_OPENING" value="3" />
-    <option name="SUBQUERY_CONTENT" value="4" />
-    <option name="SUBQUERY_CLOSING" value="4" />
-    <option name="SUBQUERY_PAR_SPACE_BEFORE" value="1" />
-    <option name="SELECT_NEW_LINE_AFTER_ALL_DISTINCT" value="true" />
-    <option name="SELECT_ASTERISK_REGULAR" value="true" />
-    <option name="FROM_EL_LINE" value="1" />
-    <option name="FROM_ONLY_JOIN_INDENT" value="2" />
-    <option name="FROM_PLACE_ON" value="10" />
-  </SqlCodeStyleSettings>
+<SqlCodeStyleSettings version="7">
+<option name="KEYWORD_CASE" value="1"/>
+<option name="QUERY_EL_LINE" value="101"/>
+<option name="QUERY_EL_COMMA" value="1"/>
+<option name="QUERY_IN_ONE_STRING" value="3"/>
+<option name="QUERY_TRUE_INDENT" value="false"/>
+<option name="QUERY_ALIGN_ELEMENTS" value="false"/>
+<option name="SUBQUERY_OPENING" value="1"/>
+<option name="SUBQUERY_CONTENT" value="2"/>
+<option name="SUBQUERY_CLOSING" value="2"/>
+<option name="SUBQUERY_PAR_SPACE_BEFORE" value="1"/>
+<option name="WITH_EL_LINE" value="101"/>
+<option name="WITH_EL_COMMA" value="1"/>
+<option name="SELECT_KEEP_N_ITEMS_IN_LINE" value="0"/>
+<option name="SELECT_USE_AS_WORD" value="1"/>
+<option name="FROM_EL_LINE" value="1"/>
+<option name="FROM_ONLY_JOIN_INDENT" value="2"/>
+<option name="FROM_PLACE_ON" value="10"/>
+<option name="EXPR_CASE_THEN_ALIGN" value="true"/>
+<option name="EXPR_CASE_ELSE_ALIGN_THEN" value="true"/>
+<option name="EXPR_CASE_END" value="1"/>
+</SqlCodeStyleSettings>
 </code_scheme>
