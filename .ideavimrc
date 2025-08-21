@@ -16,6 +16,8 @@ vnoremap > >gv
 map Y y$
 vnoremap p pgvy
 
+nmap s ys
+
 nnoremap * *``
 
 nnoremap <C-u> <C-u>zz
@@ -62,3 +64,15 @@ nmap <leader><C-n> <Plug>AllWholeOccurrences
 xmap <leader><C-n> <Plug>AllWholeOccurrences
 nmap <leader>g<C-n> <Plug>AllOccurrences
 xmap <leader>g<C-n> <Plug>AllOccurrences
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Clojure Specifics                               """
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <space>co :action :cursive.repl.actions/jump-to-output<CR>
+nnoremap <space>cr :action :cursive.repl.actions/jump-to-repl<CR>
+nnoremap <space>cx :action :cursive.repl.actions/run-top-sexp<CR>
+nnoremap <space>cl :action :cursive.repl.actions/load-file<CR>
+nnoremap <space>cn :action :cursive.repl.actions/switch-namespace<CR>
+nnoremap <space>cs :action :cursive.repl.actions/sync-files<CR>
+nnoremap <space>cc :action :cursive.repl.actions/clear-repl<CR>
