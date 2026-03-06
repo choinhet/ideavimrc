@@ -9,12 +9,14 @@ set clipboard=unnamedplus,unnamed,ideaput
 set nocompatible
 set backspace=2
 set showcmd
+set ideajoin
 
 vnoremap < <gv
 vnoremap > >gv
 
+vnoremap p P
+
 map Y y$
-vnoremap p pgvy
 
 nmap s ys
 
@@ -25,6 +27,15 @@ nnoremap <C-d> <C-d>zz
 
 nmap <C-w>q :q<CR>
 nmap <leader>a ggVG
+
+nmap <leader>pp :%s/('\(%(\w\+)s\)')/\1/g<cr>
+nmap <leader>pr :%s/\(%(\w\+)s\)/('\1')/g<cr>
+
+nmap <leader>dp :%s/{{\s*ref(['"]\(\w\+\)['"])\s*}}/adm.\1/g<cr>
+nmap <leader>dd :%s/adm.\(\w\+\)/{{ ref('\1') }}/g<cr>
+
+vmap <leader>dp :%s/\%V{{\s*ref(['"]\(\w\+\)['"])\s*}}/adm.\1/g<cr>
+vmap <leader>dd :%s/\%Vadm.\(\w\+\)/{{ ref('\1') }}/g<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Plugins                                         """
@@ -60,19 +71,21 @@ xmap g<C-n> <Plug>NextOccurrence
 xmap <C-x> <Plug>SkipOccurrence
 xmap <C-p> <Plug>RemoveOccurrence
 
-nmap <leader><C-n> <Plug>AllWholeOccurrences
-xmap <leader><C-n> <Plug>AllWholeOccurrences
-nmap <leader>g<C-n> <Plug>AllOccurrences
-xmap <leader>g<C-n> <Plug>AllOccurrences
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
 
+function! python_line_title()
+  let width = 80
+  let text = trim(getline('.'))
+  let num_equal_signs = width - len(text) - 4
+  let left = num_equal_signs / 2
+  let right = num_equal_signs - left
+  let newline = '# ' . repeat('=', left) . ' ' . text . ' ' . repeat('=', right)
+  exe 'normal! cc' . newline
+endfunction
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Clojure Specifics                               """
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <space>co :action :cursive.repl.actions/jump-to-output<CR>
-nnoremap <space>cr :action :cursive.repl.actions/jump-to-repl<CR>
-nnoremap <space>cx :action :cursive.repl.actions/run-top-sexp<CR>
-nnoremap <space>cl :action :cursive.repl.actions/load-file<CR>
-nnoremap <space>cn :action :cursive.repl.actions/switch-namespace<CR>
-nnoremap <space>cs :action :cursive.repl.actions/sync-files<CR>
-nnoremap <space>cc :action :cursive.repl.actions/clear-repl<CR>
+nnoremap <leader>cc :call python_line_title()<CR>
