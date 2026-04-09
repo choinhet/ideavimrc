@@ -10,6 +10,7 @@ set nocompatible
 set backspace=2
 set showcmd
 set ideajoin
+set incsearch
 
 vnoremap < <gv
 vnoremap > >gv
@@ -56,6 +57,10 @@ nmap <leader>i <action>(Generate)
 
 nnoremap <c-o> :action Back<cr>
 nnoremap <c-i> :action Forward<cr>
+
+map <S-f> <action>(Find)
+map <S-r> <action>(Replace)
+map <leader>sw <action>(SurroundWith)
 
 nmap gr :action ShowUsages<CR>
 nmap gi :action GotoImplementation<CR>
