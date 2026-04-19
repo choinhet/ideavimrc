@@ -94,3 +94,10 @@ function! python_line_title()
 endfunction
 
 nnoremap <leader>cc :call python_line_title()<CR>
+
+nnoremap w /[^[:space:]\n()[\]{}]*\zs[^[:space:]\n()[\]{}]<CR>:nohlsearch<CR>
+vnoremap w /[^[:space:]\n()[\]{}]*\zs[^[:space:]\n()[\]{}]<CR>:nohlsearch<CR>
+onoremap w /[^[:space:]\n()[\]{}]*[^[:space:]\n()[\]{}]\zs<CR>:nohlsearch<CR>
+nnoremap b ?\zs[^[:space:]\n()[\]{}]*[^[:space:]\n()[\]{}]<CR>:nohlsearch<CR>
+vnoremap b ?\zs[^[:space:]\n()[\]{}]*[^[:space:]\n()[\]{}]<CR>:nohlsearch<CR>
+onoremap b ?\zs[^[:space:]\n()[\]{}]*[^[:space:]\n()[\]{}]<CR>:nohlsearch<CR>
