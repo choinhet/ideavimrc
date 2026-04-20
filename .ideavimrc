@@ -95,6 +95,14 @@ endfunction
 
 nnoremap <leader>cc :call python_line_title()<CR>
 
+" Focus on REPL
+nnoremap <leader>c :action ActivateClojureREPLToolWindow<CR>
+
+" Run selected Clojure expression
+nnoremap z :action :cursive.repl.actions/run-top-sexp<CR>
+vnoremap z :action :cursive.repl.actions/run-last-sexp<CR>
+
+" Smarter w & b
 nnoremap w /[^[:space:]\n()[\]{}\.<>\/]*\zs[^[:space:]\n()[\]{}\.<>\/]<CR>:nohlsearch<CR>
 vnoremap w /[^[:space:]\n()[\]{}\.<>\/]*\zs[^[:space:]\n()[\]{}\.<>\/]<CR>:nohlsearch<CR>gv
 onoremap w /[^[:space:]\n()[\]{}\.<>\/]*[^[:space:]\n()[\]{}\.<>\/]\zs<CR>:nohlsearch<CR>gv
