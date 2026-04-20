@@ -105,8 +105,9 @@ vnoremap z :action :cursive.repl.actions/run-last-sexp<CR>
 " Smarter w & b
 nnoremap w /[^[:space:]\n()[\]{}\.<>\/]*\zs[^[:space:]\n()[\]{}\.<>\/]<CR>:nohlsearch<CR>
 vnoremap w /[^[:space:]\n()[\]{}\.<>\/]*\zs[^[:space:]\n()[\]{}\.<>\/]<CR>:nohlsearch<CR>gv
-onoremap w /[^[:space:]\n()[\]{}\.<>\/]*[^[:space:]\n()[\]{}\.<>\/]\zs<CR>:nohlsearch<CR>gv
+onoremap w /[^[:space:]\n()[\]{}\.<>\/]*[^[:space:]\n()[\]{}\.<>\/]\zs<CR>:nohlsearch<CR>
 nnoremap b ?\zs[^[:space:]\n()[\]{}\.<>\/]*[^[:space:]\n()[\]{}\.<>\/]<CR>:nohlsearch<CR>
 vnoremap b ?\zs[^[:space:]\n()[\]{}\.<>\/]*[^[:space:]\n()[\]{}\.<>\/]<CR>:nohlsearch<CR>gv
-onoremap b ?\zs[^[:space:]\n()[\]{}\.<>\/]*[^[:space:]\n()[\]{}\.<>\/]<CR>:nohlsearch<CR>gv
+onoremap b ?\zs[^[:space:]\n()[\]{}\.<>\/]*[^[:space:]\n()[\]{}\.<>\/]<CR>:nohlsearch<CR>
+
 
